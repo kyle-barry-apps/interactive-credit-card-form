@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  --primary-dark-violet: hsl(278, 68%, 11%);
+  --primary-light-violet: hsl(270, 3%, 87%);
+  --error-red: hsl(0, 100%, 66%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-image: url('./images/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 17rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main img {
+  max-width: 20rem;
+  filter: drop-shadow(5px 5px 50px rgba(0,0,0,.8))
+}
+
+section.credit-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: -2rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+
+section .back-card-container {
+  align-self: flex-end;
+  z-index: -1;
+  position: relative;
+}
+
+section .cvc-code {
+  color: white;
+  font-size: .6rem;
+  position: absolute;
+  right: 2.4rem;
+  top: 5rem;
+  letter-spacing: 1px;
+}
+
+section .front-card-container {
+  position: relative;
+  transform: translateY(-5.1rem);
+  align-self: flex-start;
+  color: hsla(0, 0%, 100%, .9);
+}
+
+section.credit-cards .card-logo {
+  position: absolute;
+  top: 1.3rem;
+  left: 1.3rem;
+  width: 3.5rem;
+}
+
+section.credit-cards .credit-card-number {
+  position: absolute;
+  letter-spacing: 3px;
+  bottom: 3.1em;
+  left: 1.5rem;
+  font-size: 1.1rem;
+}
+
+section.credit-cards .card-details {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1.7rem;
+  left: 1.5rem;
+  letter-spacing: 2px;
+  font-size: .6rem;
+  width: 16.5rem;
+  color: hsla(0, 0%, 100%, .85);
+}
+
+section.form-container {
+  width: 25rem;
+  letter-spacing: 2px;
+  font-size: .8rem;
+  color: var(--primary-dark-violet);
+}
+
+section.form-complete-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+}
+
+section.form-complete-container .btn {
+  background-color: var(--primary-dark-violet);
+}
+
+section.form-complete-container img {
+  margin-bottom: 2rem;
+}
+
+section.form-complete-container h1 {
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+section.form-complete-container p {
+  font-size: .9rem;
+  color: rgba(0,0,0,.6);
+  margin-bottom: 2rem;
+}
+
+.error {
+  display: none;
+  color: var(--error-red);
+  font-size: .7rem;
+  margin-top: .2rem;
+  letter-spacing: normal;
+}
+
+section.form-container label {
+  text-transform: uppercase;
+}
+
+section.form-container input {
+  border-radius: .4rem;
+  border: 1px solid var(--primary-light-violet);
+  outline: none;
+}
+
+section.form-container input:focus {
+  outline: 1px solid var(--primary-dark-violet)
+}
+
+section.form-container input.inputError {
+  outline: 1px solid var(--error-red);
+}
+
+section.form-container .form-control {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-bottom: 1rem;
+}
+
+section.form-container input[placeholder] {
+  height: 2.3rem;
+  padding: .8rem;
+  font-size: 1rem;
+}
+
+section.form-container input::placeholder {
+  color: var(--primary-light-violet);
+}
+
+section.form-container .bottom-form-fields {
+  display: flex;
+  align-items: center;
+}
+
+section.form-container .form-control-row {
+  display: flex;
+  flex-direction: column;
+  margin-right: .5rem;
+  width: 20%;
+  gap: .3rem;
+}
+
+section.form-container .form-control-row.cvc{
+  width: auto;
+}
+
+section.form-container .bottom-row-error-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: .3rem;
+  padding: .1rem;
+  margin-bottom: .2rem;
+}
+
+section.form-container .bottom-row-error-container #expiration-month-error, #expiration-year-error {
+  display: inline-block;
+  width: 5.1rem;
+  height: 2rem;
+  padding: .2rem;
+}
+
+section.form-container .bottom-row-error-container #cvc-error {
+  display: inline-block;
+  width: auto;
+}
+
+
+section .btn {
+  width: 100%;
+  border-radius: .4rem;
+  border: none;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  color: white;
+  background-color: var(--primary-dark-violet);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+  transition: all .15s ease-in;
+}
+
+section.form-container button {
+  margin-bottom: 10rem;
+}
+
+section.form-container button:hover {
+  filter: grayscale(.4)
+}
+
+section.form-container button:active {
+  transform: scale(.99);
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-position: left;
+    background-size: 30% 100%;
+    align-items: center;
+  }
+
+  main {
+    max-width: none;
+    flex-direction: row;
+    gap: 6rem;
+    height: 25rem;
+  }
+
+  section.credit-cards {
+    margin: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  section .front-card-container {
+    transform: translate(-4rem, -12rem);
+  }
+
+  section .back-card-container {
+    z-index: auto;
+    transform: translateY(12rem);
+  }
+
+  section.form-container {
+    height: 100%;
+  }
+
+  section.form-container form {
+    transform: translateY(4rem);
+  }
+
+  section.form-container button {
+    margin-bottom: 0;
+  }
+
+}
+
+@media (min-width: 1400px) {
+ body {
+  background-size: 35% 100%;
+ }
+}
