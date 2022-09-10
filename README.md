@@ -1,4 +1,4 @@
-Live Url: https://kyle-barry-apps.github.io/interative-credit-card-form
+Live Url: https://kyle-barry-apps.github.io/interactive-credit-card-form
 
 # Interactive credit card form with validation
 
